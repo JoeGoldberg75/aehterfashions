@@ -1,0 +1,575 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F5F5DC; /* Light Beige */
+    color: #333; /* Charcoal */
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: transparent; /* Make header background transparent */
+    position: absolute; /* Position header absolutely over hero section */
+    width: 100%;
+    color: #FFFDD0; /* Match text color with hero section */
+    z-index: 1000; /* Ensure header stays on top */
+}
+
+.logo h1 {
+    font-size: 24px;
+    color: #FFFDD0; /* Cream color to match hero section */
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #FFFDD0; /* Same color as hero text */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #FF6F61; /* Soft Coral for hover effect */
+}
+
+.cta .btn {
+    padding: 10px 20px;
+    background-color: #FF6F61; /* Soft Coral for CTA button */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta .btn:hover {
+    background-color: #E55B50; /* Darker Coral for hover effect */
+}
+
+/* Hero Section Styles */
+.hero {
+    height: 100vh; /* Full viewport height */
+    background-image: url('images/hero-background.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    color: #FFFDD0; /* Cream color for text */
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 91, 91, 0.6); /* Semi-transparent overlay */
+    z-index: 1;
+}
+
+
+/* Hero Section Styles */
+.hero {
+    height: 100vh; /* Full viewport height */
+    background-image: url('hero-background.jpg.jpg'); /* Replace with your hero image URL */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the background image */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    text-align: center; /* Center text */
+    position: relative; /* Relative positioning for overlay */
+    color: #fffdd0; /* Cream color for text */
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 91, 91, 0.6); /* Semi-transparent overlay */
+    z-index: 1; /* Ensures overlay is above the background */
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    color: #FFFDD0;
+    z-index: 1000;
+}
+
+.logo h1 {
+    font-size: 24px;
+    color: #FFFDD0;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #FFFDD0;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #FF6F61;
+}
+
+.cta .btn {
+    padding: 10px 20px;
+    background-color: #FF6F61;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta .btn:hover {
+    background-color: #E55B50;
+}
+
+/* Hero Section Styles */
+.hero {
+    height: 100vh;
+    background-image: url('ai tshirt.webp');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    color: #FFFDD0;
+    padding: 10px 20px; /* Add padding to ensure content doesn't overflow on mobile */
+}
+
+.hero-content {
+    max-width: 800px; /* Limit width for better responsiveness */
+    position: relative;
+    z-index: 2;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    animation: fadeIn 1s;
+}
+
+.btn {
+    padding: 15px 30px;
+    background-color: #FF6F61;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #E55B50;
+}
+
+/* Responsive Styles for Header and Hero */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+
+    .logo h1 {
+        font-size: 20px; /* Smaller logo font size */
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .navbar ul li {
+        margin: 5px 0;
+    }
+
+    .navbar ul li a {
+        font-size: 14px; /* Smaller font size for links */
+    }
+
+    .hero h2 {
+        font-size: 32px; /* Smaller hero font size */
+    }
+
+    .btn {
+        padding: 10px 20px; /* Smaller button padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 24px; /* Further reduce font size for small screens */
+    }
+
+    .logo h1 {
+        font-size: 18px;
+    }
+
+    .navbar ul li a {
+        font-size: 12px; /* Smaller font size for links */
+    }
+}
+
+/* Basic Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    position: absolute;
+    width: 100%;
+    color: #FFFDD0;
+    z-index: 1000;
+}
+
+/* Responsive Styling for Mobile Header */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+        flex-direction: row; /* Ensures items stay in a row */
+    }
+
+    .logo h1 {
+        font-size: 20px;
+    }
+
+    /* Hide Desktop Navbar on Mobile */
+    .navbar {
+        display: none; /* Hide the text-based navigation links */
+    }
+
+    /* Display Icons on Mobile */
+    .mobile-icons {
+        display: flex;
+        gap: 15px; /* Space between icons */
+        align-items: center; /* Vertically aligns icons with logo */
+    }
+
+    .mobile-icons .icon img {
+        width: 24px;
+        height: 24px;
+        filter: brightness(0) invert(1);
+    }
+}
+/* Hide Icons on Desktop and Display Only on Mobile */
+.mobile-icons {
+    display: none; /* Hidden by default */
+}
+
+@media (max-width: 768px) {
+    /* Show Icons Only on Mobile */
+    .mobile-icons {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+    }
+
+    /* Hide Desktop Navbar */
+    .navbar {
+        display: none; /* Hides the text-based navigation links on mobile */
+    }
+
+    /* Header Layout Adjustments for Mobile */
+    header {
+        padding: 10px 20px;
+    }
+
+    .logo h1 {
+        font-size: 20px;
+    }
+}
+/* About Section */
+.about-section {
+    background-image: url('large screen anime.webp'); /* Replace with your image path */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the background image */
+    padding: 280px 20px; /* Padding for top and bottom */
+    position: relative; /* For positioning text */
+    overflow: hidden; /* Hide overflow */
+    color: whitesmoke; /* Text color */
+}
+
+.about-content {
+    max-width: 800px; /* Limit width for readability */
+    margin: 0 auto; /* Center the content */
+    text-align: center; /* Center align text */
+    position: relative; /* Position for text highlighting */
+    animation: fadeIn 1s ease-in; /* Scroll animation */
+}
+
+.about-section h2 {
+    font-size: 2.5em; /* Heading size */
+    margin-bottom: 20px; /* Space below heading */
+    background: rgba(0, 0, 0, 0.5); /* Highlight background */
+    padding: 10px; /* Padding for highlighted area */
+    border-radius: 5px; /* Rounded corners for the highlight */
+}
+
+.about-section p {
+    font-size: 2em; /* Regular text size */
+    line-height: 1.6; /* Improved line spacing */
+    background: rgba(0, 0, 0, 0.5); /* Highlight background for paragraph */
+    padding: 10px; /* Padding for highlighted area */
+    border-radius: 5px; /* Rounded corners for the highlight */
+    margin: 0 auto; /* Center paragraph */
+}
+
+/* Scroll animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start transparent */
+        transform: translateY(20px); /* Move up slightly */
+    }
+    to {
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* Back to normal position */
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .about-section h2 {
+        font-size: 2em; /* Adjust heading size for smaller screens */
+    }
+
+    .about-section p {
+        font-size: 0.9em; /* Adjust paragraph size for smaller screens */
+    }
+}
+
+/* Products Section */
+.products {
+    padding: 60px 20px;
+    background-color: #F5F5DC; /* Light Beige */
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-item {
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    transition: transform 0.3s;
+}
+
+.product-item:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 60px 20px;
+    background-color: #FFF; /* White background */
+}
+
+/* Contact Section */
+.contact {
+    padding: 60px 20px;
+    background-color: #F5F5DC; /* Light Beige */
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Text Shadow for Hero Text to Improve Visibility */
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    animation: fadeIn 1s;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5); /* Add shadow for readability */
+}
+
+/* Mobile Header Layout */
+@media (max-width: 768px) {
+    header {
+        flex-direction: row; /* Ensures items stay in a row */
+        justify-content: space-between; /* Adjust spacing between logo and icons */
+    }
+
+    /* Mobile Icons */
+    .mobile-icons {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+    }
+}
+
+/* Responsive Product Grid */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+    gap: 20px;
+    justify-items: center;
+}
+
+.product-item {
+    transition: transform 0.3s;
+    background-color: #FFF; /* White background for better contrast */
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover Effects on Products */
+.product-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow on hover */
+}
+
+/* Subtle Animation for Fade-In Effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content {
+    max-width: 800px;
+    position: relative;
+    z-index: 2;
+    animation: fadeIn 1.2s ease-in; /* Fade-in animation for hero content */
+}
+
+
+/* Products Section */
+.products {
+    padding: 60px 20px;
+    background-color: #c2c2a2; /* Light Beige */
+    text-align: center;
+    border-radius: 20px; /* Cart-like shape */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive columns */
+    gap: 15px; /* Default gap */
+}
+
+/* Adjust product item styles */
+.product-item {
+    background-color: #d3bebe; /* Background color for product items */
+    padding: 10px; /* Reduced padding for smaller item size */
+    border-radius: 10px; /* Rounded corners for items */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for items */
+    overflow: hidden; /* Hide overflow for images */
+    width: 100%; /* Full width of the grid column */
+}
+
+/* Adjust image styles */
+.product-item img {
+    width: 100%; /* Ensure image fills the item */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 60%; /* Reduce maximum width to 60% of the item */
+    display: block; /* Remove extra space below image */
+    margin: 0 auto; /* Center image horizontally */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .product-list {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Increase item size for smaller screens */
+        gap: 10px; /* Default gap on small screens */
+    }
+
+    .product-item {
+        padding: 15px; /* Increase padding for smaller item size */
+    }
+}
+
+@media (min-width: 769px) {
+    .product-list {
+        grid-template-columns: repeat(3, 1fr); /* Display 3 products per row on larger screens */
+        gap: 25px; /* Increase space between products on larger screens */
+    }
+
+    .product-item {
+        max-width: 90%; /* Make product items larger */
+        margin: auto; /* Center items in the grid */
+    }
+}
+
+
+.product-item h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin: 10px 0;
+}
+
+.product-item p {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.product-item .price {
+    font-size: 1.1em;
+    color: #FF6F61;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.product-item .btn {
+    padding: 10px 20px;
+    background-color: #FF6F61;
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product-item .btn:hover {
+    background-color: #E55B50;
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
